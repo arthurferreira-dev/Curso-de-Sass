@@ -1,0 +1,18 @@
+@mixin InputMx {
+    $full: 100%;
+    width: $full;
+    height: 25px;
+    padding-left: 5px;
+}
+
+@function Inputs($wid) { // Uma função pode receber parâmetros e são criadas que nem do JavaScript só que com um @ no function
+    $brd-color: ();
+
+    @if $wid >= 50 {
+        $brd-color: blue;
+    } @else {
+        $brd-color: red;
+    } 
+
+    @return $brd-color;
+}
