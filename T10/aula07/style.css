@@ -1,0 +1,17 @@
+.div1 {
+  width: 300px;
+  height: 150px;
+  background-color: hsl(0, 100%, 50%);
+}
+
+.div2 {
+  width: 300px;
+  height: 150px;
+  background-color: hsl(60, 100%, 50%);
+}
+
+.div3 {
+  width: 300px;
+  height: 150px;
+  background-color: hsl(0, 0%, 0%);
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,31 @@
+@use "sass:math";
+
+$status-msg: "Status da Compilação do Arquivo";
+$archive: "_bgcolors.scss";
+$status: () !global;
+
+$colors: (
+    'one': hsl(0, 100%, 50%),
+    'two': hsl(60, 100%, 50%),
+    'three': hsl(240, 100%, 50%)
+);
+
+@function Divs($back) {
+    @if not map-has-key($colors, $back) {
+        $status: "background-color: #{$back} (inexistente)";
+        @error "#{$status-msg} #{$archive}: #{$status}";
+        @return hsl(0, 0%, 0%);
+    } @else {
+        @return map-get($colors, $back);
+    }
+    ///@debug $back;
+}
+
+@mixin Div() {
+    $wid: 300;
+    width: ($wid + 0px);
+    height: (math.div($wid, 2) + 0px);
+}
+
+$status: "COMPILADO";
+@warn "#{$status-msg} #{$archive}: #{$status}";

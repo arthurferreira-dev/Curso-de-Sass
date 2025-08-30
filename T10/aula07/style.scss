@@ -1,0 +1,16 @@
+@use "./sass/bgcolors";
+
+.div1 {
+    @include bgcolors.Div();
+    background-color: bgcolors.Divs(one);
+}
+
+.div2 {
+    @include bgcolors.Div();
+    background-color: bgcolors.Divs(two);
+}
+
+.div3 {
+    @include bgcolors.Div();
+    background-color: bgcolors.Divs(four);
+}
