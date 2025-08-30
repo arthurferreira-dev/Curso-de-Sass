@@ -1,0 +1,19 @@
+@use "sass:math";
+@use "sass/colors";
+
+$inter: 'Sass';
+/// Exemplo em interpolação em PHP: echo "A variável tem o valor " . $inter . "!";
+@debug "Isso é um teste de Interpolação em Sass, valor da variável 'teste': #{$inter}";
+
+@mixin Retangulo {
+    $wid: 400px;
+    $hei: math.div($wid, 2);
+    width: $wid;
+    height: $hei;
+    margin-bottom: 10px;
+}
+
+.retangulo {
+    @include Retangulo();
+    background-color: colors.PickColor(secondary);
+}

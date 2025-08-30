@@ -1,0 +1,12 @@
+$color: (
+    'primary': hsl(0, 100%, 50%),
+    'secondary': hsl(330, 50%, 60%)
+);
+
+@function PickColor($key) {
+    @if not map-has-key($color, $key) {
+        @warn "Esse valor '#{$key}' não existe!";
+    } @else {
+        @return map-get($color, $key);
+    }
+}
