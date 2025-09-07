@@ -1,0 +1,31 @@
+/// Strings
+$font-roboto: "Roboto";
+$font-roboto: Roboto;
+
+/// Number
+$size-12: 12px;
+$size-12: 12;
+
+/// Cores
+$colorHEX: #000;
+$colorRGB: rgb(0, 0, 0);
+$colorHSL: hsl(0, 0%, 0%);
+
+/// Listas
+$list: (1px, 1vh, Arial, "Roboto");
+$list-2: (1px 1vh Arial "Roboto");
+
+/// Booleanos
+$true: true;
+$false: false;
+
+/// Mapas
+/// $map: ($key: $value);
+
+$colores: ('vermelho': hsl(0, 100%, 50%), 'azul': hsl(240, 100%, 50%), 'verde': hsl(120, 100%, 25%));
+
+@each $key, $value in $colores { /// Um jeito de criar várias classes e ids de uma vez com o map
+    .text-#{$key} {
+        color: $value;
+    }
+}
