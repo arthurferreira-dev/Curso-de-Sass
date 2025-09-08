@@ -1,0 +1,31 @@
+@use "sass:string";
+@use "sass:math";
+@use "sass:list";
+
+$string: 'string de texto';
+
+@debug string.quote($string); /// Transformar minha string entre ""
+
+@debug string.length($string); /// Mostra quantos carácteres tem sua string
+
+@debug string.to-upper-case($string); /// Transformar minha string pra maiuscula
+@debug string.to-lower-case($string); /// Transformar minha string pra minuscula
+
+@debug string.unique-id(); /// Cria id único válido no CSS
+
+$number: 10.21215;
+
+@debug math.ceil($number); /// Arredonda pra mais
+@debug math.floor($number); /// Arredonda pra menos
+
+@debug math.max(4, 1, 56, 1354, 0.5); /// Retorna o maior número
+@debug math.min(4, 1, 56, 1354, 0.5); /// Retorna o menor número
+
+$list: (5px, 1in, 1vh, 1254vw);
+
+@debug list.length($list); /// Retorna o índice de elementos da lista
+
+@debug list.separator($list); /// Mostra oque separa os elementos da lista
+
+$index: 2;
+@debug list.nth($list, $index); /// list.nth($lista, indice) | retorna o elemento da lista na sua posição
